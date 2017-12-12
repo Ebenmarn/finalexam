@@ -13,7 +13,10 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
    <bottom>
-      <HBox prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <HBox prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblerror" />
+         </children></HBox>
    </bottom>
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
@@ -29,7 +32,7 @@
       </HBox>
    </top>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane gridLinesVisible="true" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -37,10 +40,8 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -51,12 +52,12 @@
             <Label text="Save Each Month" />
             <Label text="Years to Work" GridPane.rowIndex="1" />
             <Label text="Annual Return" GridPane.rowIndex="2" />
-            <Label text="What you need to save" GridPane.rowIndex="4" />
-            <Label text="Years Retired" GridPane.rowIndex="6" />
-            <Label text="Annual Return" GridPane.rowIndex="7" />
-            <Label text="Required Income" GridPane.rowIndex="8" />
-            <Label text="Monthly SSI" GridPane.rowIndex="9" />
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <Label text="What you need to save" GridPane.rowIndex="3" />
+            <Label text="Years Retired" GridPane.rowIndex="4" />
+            <Label text="Annual Return" GridPane.rowIndex="5" />
+            <Label text="Required Income" GridPane.rowIndex="6" />
+            <Label text="Monthly SSI" GridPane.rowIndex="7" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <children>
                   <Button mnemonicParsing="false" onAction="#btnClear" text="Clear">
                      <HBox.margin>
@@ -73,6 +74,13 @@
                </GridPane.margin>
             </HBox>
             <TextField fx:id="txtYearsToWork" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtannualreturn" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtyearsretired" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtretiredreturn" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtrequiredincome" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtmonthlyssi" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="lblneedtosave" text="   :_____" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblsaveeachmonth" text="   :_____" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </center>
